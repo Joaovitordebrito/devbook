@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  # MySQL service
+  mysql-db:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: devbook  # Change as needed
+      MYSQL_DATABASE: devbook
+      MYSQL_USER: devbookuser
+      MYSQL_PASSWORD: devbook # Change as needed
+    ports:
+      - "3306:3306"  # Map container port 3306 to host port 3306
